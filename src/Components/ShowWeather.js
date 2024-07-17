@@ -14,8 +14,8 @@ const [dynamicBackground, setDynamicBackground] = useState("");
   // Values in standard units
 
   const pressureInAtm = (pressure / 1000).toFixed(2);
-  const tempInCelcius = (temperature - 273.15).toFixed(2);
-  const visibilityInKM = (visibility / 1000).toFixed(2);
+  const tempInCelcius = (temperature - 273.15).toFixed(0);
+  const visibilityInKM = (visibility / 1000).toFixed(0);
 
   // Change border dynamically
   const dynamicBackgroundColor = (temp) => {

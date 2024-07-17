@@ -6,8 +6,8 @@ import ShowWeather from "./Components/ShowWeather";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState("");
-  const [inputCity, setInputCity] = useState("Seattle");
-  const [cityName, setCityName] = useState("Seattle");
+  const [inputCity, setInputCity] = useState("Stuttgart");
+  const [cityName, setCityName] = useState("Stuttgart");
   const [error, setError] = useState(false);
 
   //  Input element handler
