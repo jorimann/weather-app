@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const InputCity = ({ onSubmitHandler, city, onInputHandler }) => {
+  const inputRef = useRef(null); // Создаем ссылку на input
+
+  useEffect(() => {
+    // Выделяем текст в поле, когда компонент загружается
+    if (inputRef.current) {
+      inputRef.current.select();
+    }
+  }, []);
+
   return (
     <div className="input">
       <input
@@ -8,9 +17,9 @@ const InputCity = ({ onSubmitHandler, city, onInputHandler }) => {
         value={city}
         onChange={onInputHandler}
         placeholder="City..."
+        ref={inputRef} // Привязываем ссылку к input
       />
-      {/* <br /> */}
-      <button className="input_btn" type="submit" onClick={onSubmitHandler}> 
+      <button className="input_btn" type="submit" onClick={onSubmitHandler}>
         Search
       </button>
     </div>
